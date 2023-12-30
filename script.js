@@ -3,6 +3,7 @@ window.onload = function() {
     let tmp = new Date(Date.now());
     let dateInputFormatted = tmp.toLocaleString().split(',')[1];
     document.getElementById('time').value = dateInputFormatted.substring(1, 6);
+    display_data();
 };
 
 
@@ -17,20 +18,28 @@ function handleform(event) {
         data:[]
     };
 
-    let title = document.getElementById('title').value;
-    let info = document.getElementById('info').value;
+    let title = document.getElementById('title');
+    let info = document.getElementById('info');
     let time = document.getElementById('time').value;
+
+    if (title.value.length == 0 || info.value.length == 0){
+        alert("All Fields are required");
+        return;
+    }
 
     let obj = {
         id: ls_data.length+1,
-        title: title,
-        info: info,
+        title: title.value,
+        info: info.value,
         time: time
     };
 
     ls_data.length++;
     ls_data.data.push(obj);
     localStorage.setItem('todo-data', JSON.stringify(ls_data));
+    title.value = "";
+    info.value = "";
+    
     display_data();
 }
 form_data.addEventListener('submit', handleform);
