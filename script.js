@@ -22,7 +22,7 @@ function handleform(event) {
     let info = document.getElementById('info');
     let time = document.getElementById('time').value;
 
-    if (title.value.length == 0 || info.value.length == 0){
+    if (title.value.length == 0 || info.value.length == 0 || time.length == 0){
         alert("All Fields are required");
         return;
     }
