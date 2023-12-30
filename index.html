@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body data-bs-theme="dark">
+    <!-- NAVBAR -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">TODO APPLICATION</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <div class="container about">
+        <h2>About ToDo Application</h2>
+        <div class="clearfix">
+            <img src="image.svg" class="col-md-3 float-md-end mb-3 ms-md-3" alt="Image Loding"
+                height="280px">
+
+            <p>Welcome to our Todo List Application, where simplicity meets productivity for users of all backgrounds.
+                Our mission is to empower individuals to effortlessly manage their tasks, goals, and aspirations. We
+                understand that every user is unique, and that's why our application is designed to cater to all needs
+                and preferences.</p>
+            <p>Whether you're a busy professional, a student with deadlines, or someone simply striving for a more
+                organized life, our intuitive interface ensures a seamless experience. With a focus on user-friendly
+                features, customization options, and cross-platform accessibility, our Todo List Application adapts to
+                your lifestyle.</p>
+            <p>Join a diverse community of achievers who rely on our app to enhance their daily efficiency. From
+                collaborative projects to personal milestones, we're here to help you stay on top of your game. Embrace
+                a clutter-free, organized life with our Todo List Application - because your goals deserve a platform
+                that works for everyone.</p>
+        </div>
+    </div>
+    <br>
+    <!-- FORM -->
+    <div class="container form">
+        <form class="row g-3" id="data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter Title">
+            </div>
+
+            <div class="mb-3">
+                <label for="info" class="form-label">Information</label>
+                <textarea row="3" class="form-control" id="info" placeholder="Enter Information"></textarea>
+            </div>
+
+            <div class="col-auto w-25">
+                <label for="time" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" placeholder="HH:MM" width="50%">
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success">ADD</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- TODO List -->
+    <div class="container todo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" style="width: 1%;">#</th>
+                    <th scope="col" style="width: 2%;">Title</th>
+                    <th scope="col" style="width: 5%;">Info</th>
+                    <th scope="col" style="width: 1%;">Time</th>
+                    <th scope="col" style="width: 1%;">Action</th>
+                </tr>
+            </thead>
+            <tbody> </tbody>
+        </table>
+
+    </div>
+
+</body>
+<script src="script.js">
+    display_data();
+</script>
+
+</html>
